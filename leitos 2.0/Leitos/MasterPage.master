@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="UTI_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Principal | Leitos Rocio</title>
+    <script src="https://kit.fontawesome.com/b8fb32cd64.js" crossorigin="anonymous"></script>
+    <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" media="all" href="../css/webslidemenu.css" />
+    <script type="text/javascript" src="../Script/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../Script/webslidemenu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+
+    <script>
+        function deleta_cookie() {
+            document.cookie = 'id=; expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;';
+            document.cookie = 'local=; expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;';
+            window.location.href = '../Default.aspx';
+        };
+
+        function dia_semana() {
+            var d = new Date();
+            dayName = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
+
+            if (dayName[d.getDay()] == 'Sábado' || dayName[d.getDay()] == 'Domingo') {
+                 window.location.href = 'Altas.aspx';
+               
+            } else {
+                alert('Atenção essa função so podera ser utilizada no Sábado e Domingo');
+                
+            }
+        }
+        
+    </script>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="cbp-spmenu-push">
+    <form id="form1" runat="server">
+        <div class="wsmenucontainer" style="min-width: 1600px;">
+            <div class="wsmobileheader clearfix">
+                <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+                <div class="wssearch clearfix">
+                </div>
+            </div>
+        </div>
+        <nav class="wsmenu clearfix" style="height: 740px;">
+            <div class="overlapblackbg"></div>
+            <ul class="wsmenu-list">
+                <li class="leftlogo" style="padding: 1em">
+                    <img src="../Images/HOSP ROCIO.png" /></li>
+                <li aria-haspopup="true">
+                    <a href="Principal.aspx"><i class="fas fa-home"></i><span class="wsarrow"></span>Inicio</a>
+                </li>
+                <li aria-haspopup="true">
+                    <a href="leitos.aspx"><i class="fas fa-bed"></i><span class="wsarrow"></span>Altas Liberadas</a>
+                </li>
+                <li aria-haspopup="true">
+                    <a href="#" onclick="dia_semana()"><span class="wsmenu-click"></span><i class="fas fa-bed"></i>Altas<span class="wsarrow"></span></a>
+                </li>
+                <li aria-haspopup="true">
+                    <a href="../alterausuario.aspx"><span class="wsmenu-click"></span><i class="fas fa-user"></i>Meu Perfil<span class="wsarrow"></span></a>
+                </li>
+                <li aria-haspopup="true">
+                    
+                    <a href="#" onclick="voltar()"><span class="wsmenu-click"></span><i class="fas fa-user"></i>Voltar ao Posto<span class="wsarrow"></span></a>
+                </li>
+                <li aria-haspopup="true">
+                    <a href="#" onclick="deleta_cookie()"><i class="fas fa-home"></i><span class="wsarrow"></span>Sair</a>
+                </li>
+            </ul>
+        </nav>
+    <div>
+        <script>
+            function voltar() {
+                var local = Cookies.get('local')
+                if (local.includes('Posto')) {
+                    window.location.href = '../Postos/principal.aspx';
+                }
+            }
+        </script>
+        <asp:ContentPlaceHolder id="Content" runat="server">
+         
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
