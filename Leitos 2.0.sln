@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "leitos 2.0", "leitos 2.0\", "{C5EAD5AF-11C4-4490-94A1-8F25EBFA48ED}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53789"
+		Debug.AspNetCompiler.PhysicalPath = "leitos 2.0\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53789\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53789"
+		Release.AspNetCompiler.PhysicalPath = "leitos 2.0\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53789\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53789"
+		SlnRelativePath = "leitos 2.0\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5EAD5AF-11C4-4490-94A1-8F25EBFA48ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5EAD5AF-11C4-4490-94A1-8F25EBFA48ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CAE97ED-41D7-4232-9FD1-B65336C4AB5C}
+	EndGlobalSection
+EndGlobal
